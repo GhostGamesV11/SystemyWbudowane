@@ -3,7 +3,10 @@
 
 int main()
 {
-    zad1p5();
+    printf("Wybierz Program");
+    printf("Wpisz wybrany numer od 1 do 9");
+
+
 }
 void decimal_to_binary(int num)
 {
@@ -60,6 +63,28 @@ void zad1p2()
 void zad1p5()
 {
     for(int i=99;i>=0;i++)
+    {
+        if(i<10)
+        {
+            decimal_to_BCD(i);
+            printf("\n");
+        }
+        else
+        {
+            int temp = i;
+            int secend = temp%10;
+            temp=temp%10;
+            int first = temp%10;
+            decimal_to_BCD(first);
+            decimal_to_BCD(secend);
+            printf("\n");
+        }
+    }
+}
+
+void zad1p6()
+{
+    for(int i=99;i>=0;i--)
     {
         if(i<10)
         {
